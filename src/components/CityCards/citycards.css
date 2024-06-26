@@ -1,0 +1,29 @@
+.citycards{
+    height: calc(250px - 40px);
+    background:#1B1B1D;
+    width: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 0;
+    align-items: center;
+    border-radius: 20px;
+    color: white;
+    transition: 0.4s;
+    animation: slideFromRight 1s;
+}
+.days{
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+}
+.climate{
+    height: 50px;
+    width: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+    .citycards{
+        display: none;
+    }
+}

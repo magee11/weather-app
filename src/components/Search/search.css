@@ -1,0 +1,31 @@
+.search{
+    width: 20rem;
+    height: 1.5rem;
+    background-color: #1E1E1E;
+    padding:0.3rem 0.3rem 0.3rem 1rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border-radius: 8px;
+    gap: 10px;
+}
+.search img{
+    width: 25px;
+    height: 25px;
+}
+.search input{
+    background-color: transparent;
+    border: none;
+    color: white;
+    width: 80%;
+}
+
+.search input:focus{
+    outline: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .search{
+        width: 10rem;
+    }
+}

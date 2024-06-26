@@ -1,0 +1,50 @@
+.header {
+  width: 90%;
+  height: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  color: white;
+  margin: 0 auto;
+  transition: 0.4s;
+  animation: slideFromTop 1s;
+}
+.header-left {
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-right {
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+  align-items: center;
+}
+.geopin {
+  height: 25px !important ;
+  width: 25x !important;
+}
+.header img {
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .othercities{
+      flex-direction: column;
+  }
+  .card-items{
+      display: flex;
+      flex-direction: column;
+  }
+  .theme, .geopin,.notification{
+    display:none;
+  }
+  .location{
+    display: none;
+  }
+}

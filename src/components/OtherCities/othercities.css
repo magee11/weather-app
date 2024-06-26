@@ -1,0 +1,41 @@
+.othercities{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.card-items{
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    width: 40%;
+    gap: 25px;
+    transition: 0.4s;
+    animation: slideFromLeft 1s;
+}
+.content{
+    padding: 5px;
+    width: 70%;
+    margin: 0 auto;
+    color: white;
+    box-shadow: 8px 8px 8px rgba(0.4, 0.4, 0.4, 0.4);
+}
+.other-cities{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 30%;
+    transition: 0.4s;
+    animation: slideFromRight 1s;
+}
+.explore-cards{
+    width: 30%;
+    transition: 0.4s;
+    animation: contentAppear 1s;
+    
+}
+
+@media only screen and (max-width: 600px) {
+    .other-cities{
+        display: none;
+    }
+}

@@ -1,0 +1,33 @@
+.cards{
+    height: 180px;
+    width: 200px;
+    border-radius: 20px;
+    background: #1B1B1D;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+}
+
+.title{
+    font-size: 18px;
+    font-weight: 500;
+}
+.cards img{
+    width: 110px;
+    height: 110px;
+}
+.cards-detials{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .cards{
+        display: none;
+    }
+  }
