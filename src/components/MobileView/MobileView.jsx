@@ -18,6 +18,7 @@ const formatTime = (timestamp) => {
     hour12: true,
   });
 };
+
 const MobileView = () => {
   const { weatherData } = useContext(WeatherContext);
   const defaultSunrise = weatherData
@@ -26,6 +27,7 @@ const MobileView = () => {
   const defaultSunset = weatherData
     ? formatTime(weatherData.sys.sunset)
     : "00:00";
+
   return (
     <div className="mobileview">
       <p className="temperature">
@@ -33,14 +35,14 @@ const MobileView = () => {
         <sup>°c</sup>
       </p>
       <span className="climate-details">
-        {weatherData ? weatherData?.weather.main : "Cloudy"} 28<sup>°</sup>/21
+        {weatherData ? weatherData?.weather[0].main : "Cloudy"} 28<sup>°</sup> / 21
         <sup>°</sup>
       </span>
       <p>{weatherData?.name}</p>
       <div className="mobile-center-content">
         <div className="details-header">
           <p>5-day Forecast</p>
-          <p>More Detaisl</p>
+          <p>More Details</p>
         </div>
         {weeklydetials.map((item) => (
           <div className="weeklydetials" key={item.text}>
@@ -53,48 +55,8 @@ const MobileView = () => {
             </div>
           </div>
         ))}
-        <button> 5-days Forecast </button>
-      </div>
-
-      <div className="mobile-cards">
-        <div className="mobile-cards-left">
-          <div className="mobile-cards-top">
-            <p>Wind Direction : West</p>
-            <p>
-              Wind speed : {weatherData ? weatherData?.wind.speed : "0"}km/h
-            </p>
-          </div>
-          <div className="mobile-cards-bottom">
-            <p>Sunrise : {defaultSunrise}</p>
-            <p>Sunset : {defaultSunset}</p>
-          </div>
-        </div>
-        <div className="mobile-cards-right">
-          <div>
-            <p>Humidity</p>
-            <p>Real feel</p>
-            <p>UV</p>
-            <p>Pressure</p>
-            <p>chance of rain</p>
-          </div>
-          <div>
-            <b>
-              <p>{weatherData ? weatherData?.main.humidity : "0"}</p>
-            </b>
-            <b>
-              <p>{weatherData ? weatherData?.main.feels_like : "0"}</p>
-            </b>
-            <b>
-              <p>{weatherData ? weatherData?.wind.gust : "0"}</p>
-            </b>
-            <b>
-              <p>{weatherData ? weatherData?.main.pressure : "0"}</p>
-            </b>
-            <b>
-              <p>{weatherData ? weatherData?.main.humidity : "0"}</p>
-            </b>
-          </div>
-        </div>
+        <button>5-days Forecast</button>
+        
       </div>
     </div>
   );

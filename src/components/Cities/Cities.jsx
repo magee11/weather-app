@@ -1,15 +1,15 @@
 import React from "react";
 import "./cities.css";
-const Cities = ({ country, city, climate }) => {
+const Cities = ({ country, city, climate,temperature }) => {
   return (
     <div className="cities">
       <div className="places">
-        <span className="country">{country}</span>
-        <span className="city">{city}</span>
-        <span className="climate">{city}</span>
+        <p className="country">{country}</p>
+        <p className="city">{city}</p>
       </div>
       <div className="place-details">
-        <img src={climate} alt="" />
+        <p>{temperature}°c</p>
+        <img src={climate}  />
       </div>
     </div>
   );

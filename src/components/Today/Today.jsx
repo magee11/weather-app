@@ -43,6 +43,7 @@ const Today = () => {
   const defaultWindSpeed = weatherData ? weatherData.wind.speed : "0";
   const defaultPressure = weatherData ? weatherData.main.pressure : "0";
   const defaultHumidity = weatherData ? weatherData.main.humidity : "0";
+  const weatherMain = weatherData?.weather?.[0]?.main || "Unknown";
   const defaultSunrise = weatherData
     ? formatTime(weatherData.sys.sunrise)
     : "00:00";
@@ -77,6 +78,7 @@ const Today = () => {
         <div className="temp-details">
           <span className="temp">{defaultTemp}</span>
           <img src={cloudySun} alt="Weather Icon" />
+          <p>{weatherMain}</p>
         </div>
         <div className="bottom-details">
           <div className="bottom-left">

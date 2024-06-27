@@ -1,0 +1,87 @@
+import {
+  rainy,
+  rainySun,
+  sunny,
+  thunderCloud,
+  humidity_icon,
+  Snowy,
+  Windy_icon,
+  cloudySun,
+  sunny_icon,
+} from "../assets/assets.js";
+
+const humid = humidity_icon;
+const snowy = Snowy;
+const cloudy = cloudySun;
+const windy = Windy_icon;
+const hot = sunny_icon;
+export const otherCities = [
+  { country: "China", city: "Beijing", climate: sunny, temperature: 12 },
+  { country: "USA", city: "California", climate: rainy, temperature: 18 },
+  {
+    country: "Arab Emirates",
+    city: "Dubai",
+    climate: thunderCloud,
+    temperature: 30,
+  },
+  {
+    country: "Canada",
+    city: "Charlottetown",
+    climate: rainySun,
+    temperature: 7,
+  },
+  { country: "Japan", city: "Tokyo", climate: sunny, temperature: 16 },
+  { country: "India", city: "Mumbai", climate: humid, temperature: 27 },
+  {
+    country: "Brazil",
+    city: "Rio de Janeiro",
+    climate: sunny,
+    temperature: 25,
+  },
+  { country: "Russia", city: "Moscow", climate: snowy, temperature: 5 },
+  { country: "Australia", city: "Sydney", climate: sunny, temperature: 20 },
+  { country: "UK", city: "London", climate: rainy, temperature: 11 },
+  { country: "Germany", city: "Berlin", climate: cloudy, temperature: 10 },
+  { country: "France", city: "Paris", climate: sunny, temperature: 12 },
+  { country: "Italy", city: "Rome", climate: sunny, temperature: 15 },
+  { country: "Spain", city: "Madrid", climate: sunny, temperature: 14 },
+  {
+    country: "South Africa",
+    city: "Cape Town",
+    climate: windy,
+    temperature: 17,
+  },
+  { country: "Mexico", city: "Mexico City", climate: sunny, temperature: 18 },
+  { country: "South Korea", city: "Seoul", climate: rainy, temperature: 13 },
+  { country: "Turkey", city: "Istanbul", climate: sunny, temperature: 14 },
+  { country: "Egypt", city: "Cairo", climate: hot, temperature: 22 },
+  { country: "Nigeria", city: "Lagos", climate: humid, temperature: 26 },
+  { country: "Saudi Arabia", city: "Riyadh", climate: hot, temperature: 29 },
+  { country: "Indonesia", city: "Jakarta", climate: humid, temperature: 27 },
+  { country: "Thailand", city: "Bangkok", climate: humid, temperature: 28 },
+  { country: "Vietnam", city: "Hanoi", climate: humid, temperature: 24 },
+  { country: "Philippines", city: "Manila", climate: humid, temperature: 27 },
+  {
+    country: "Malaysia",
+    city: "Kuala Lumpur",
+    climate: humid,
+    temperature: 27,
+  },
+  { country: "Singapore", city: "Singapore", climate: humid, temperature: 27 },
+  { country: "Greece", city: "Athens", climate: sunny, temperature: 18 },
+  {
+    country: "Argentina",
+    city: "Buenos Aires",
+    climate: sunny,
+    temperature: 16,
+  },
+  { country: "Chile", city: "Santiago", climate: sunny, temperature: 15 },
+  { country: "Colombia", city: "Bogotá", climate: cloudy, temperature: 14 },
+  { country: "Peru", city: "Lima", climate: cloudy, temperature: 17 },
+  { country: "Venezuela", city: "Caracas", climate: sunny, temperature: 26 },
+  { country: "Kenya", city: "Nairobi", climate: sunny, temperature: 20 },
+  { country: "New Zealand", city: "Auckland", climate: rainy, temperature: 15 },
+  { country: "Sweden", city: "Stockholm", climate: snowy, temperature: 6 },
+  { country: "Norway", city: "Oslo", climate: snowy, temperature: 4 },
+  { country: "Finland", city: "Helsinki", climate: snowy, temperature: 5 },
+];

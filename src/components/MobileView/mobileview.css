@@ -1,130 +1,160 @@
-.mobileview {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    flex-direction: column;
+/* Default styles for screens up to 650px */
+@media only screen and (max-width: 650px) {
+    .mobileview {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        flex-direction: column;
+    }
+
+    .temperature {
+        font-size: 55px;
+        font-weight: 500;
+        margin: 10px;
+    }
+
+    .climate-details {
+        font-size: 20px;
+    }
+
+    sup {
+        vertical-align: super;
+        font-size: smaller;
+    }
+
+    .mobile-center-content {
+        margin: 5rem 0 2rem;
+        background-color: #1B1B1D;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 1rem 2rem 1rem;
+    }
+
+    .mobile-center-content button {
+        padding: 7px 50px;
+        border-radius: 50px;
+    }
+
+    .weeklydetials {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        margin: 0 auto;
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    .weeklydetials-left {
+        display: flex;
+        align-items: center;
+    }
+
+    .weeklydetials-left img {
+        width: 30px;
+        margin-right: 10px;
+    }
+
+    .weeklydetials-left p {
+        margin: 0;
+        font-size: 16px;
+    }
+
+    .weeklydetials-right {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+    }
+
+    .details-header {
+        display: flex;
+        justify-content: space-around;
+        font-size: 12px;
+        color: gray;
+        width: 100%;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 10px;
+        margin: 20px 0;
+        width: 100%;
+    }
+
+    .grid-item {
+        height: 5rem;
+        width: 5rem;
+    }
+
+    .bg-color-1 { background-color: #FF5733; }
+    .bg-color-2 { background-color: #33FF57; }
+    .bg-color-3 { background-color: #3357FF; }
+    .bg-color-4 { background-color: #FF33A1; }
+    .bg-color-5 { background-color: #A1FF33; }
+    .bg-color-6 { background-color: #33A1FF; }
+
+    .details-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .details-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #1B1B1D;
+        border-radius: 20px;
+        padding: 1rem;
+        width: 80%;
+    }
+
+    .details-text {
+        display: flex;
+        flex-direction: column;
+        color: white;
+        font-size: 1rem;
+    }
+
+    .details-img {
+        width: 5rem;
+        height: 5rem;
+    }
 }
 
-.temperature {
-    font-size: 55px;
-    font-weight: 500;
-    margin: 10px;
-}
+/* Media Query for screens between 650px and 950px */
+@media only screen and (min-width: 651px) and (max-width: 950px) {
+    .mobile-center-content {
+        width: 80%;
+        height: 70vh;
+        justify-content: space-between;
+    }
 
-.climate-details {
-    font-size: 20px;
-}
+    .mobile-center-content button {
+        padding: 11px 6rem;
+    }
 
-sup {
-    vertical-align: super;
-    font-size: smaller;
-}
-.mobile-center-content{
-    margin: 5rem 0 2rem;
-    background-color: #1B1B1D;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem 1rem 2rem 1rem
-}
+    .weeklydetials-left p {
+        font-size: 20px;
+    }
 
-.mobile-center-content button{
-    padding: 7px 50px;
-    border-radius: 50px;
-}
-.weeklydetials {
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-    margin: 0 auto;
-    padding: 10px 20px;
-    font-size: 16px;
-}
+    .weeklydetials-right {
+        font-size: 24px;
+    }
 
-.weeklydetials-left {
-    display: flex;
-    align-items: center;
-}
+    .weeklydetials-left img {
+        width: 4rem;
+    }
 
-.weeklydetials-left img {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
-}
-
-.weeklydetials-left p {
-    margin: 0;
-    font-size: 16px;
-}
-
-.weeklydetials-right {
-    display: flex;
-    align-items: center;
-    font-size: 16px;
-}
-
-.details-header{
-    display: flex;
-    justify-content: space-around;
-    font-size: 12px;
-    color: gray;
-}
-
-.mobile-cards{
-    height: 10rem;
-    width: 90%;
-    margin: 0 auto;
-    padding: 1rem;
-    border-radius: 20px;
-    display: flex;
-    gap: 20px;
-    font-size: 13px;
-    flex-direction: row;
-}
-
-.mobile-cards-left{
-    height: 100%;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    border-radius: 20px;
-}
-
-.mobile-cards-top{
-    height: 50%;
-    width: 100%;
-    background-color: #1B1B1D;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 5px;
-
-}.mobile-cards-bottom{
-    height: 50%;
-    width: 100%;
-    background-color: #1B1B1D;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 5px;
-}
-
-.mobile-cards-right{
-    height: 100%;
-    width: 50%;
-    background: #1B1B1D;;
-    border-radius: 20px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 20px 5px;
+    .details-header {
+        font-size: 14px;
+    }
 }

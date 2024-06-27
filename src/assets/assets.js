@@ -13,7 +13,11 @@ import UVCircle from './UVCircle.svg';
 import windIcon from './windIcon.svg';
 import windStatus from './windStatus.svg';
 import windy from './windy.svg';
-
+import banner from './banner.svg'
+import humidity_icon from './humidity_icon.svg';
+import Snowy from "./Snowy.png";
+import sunny_icon from './sunny_icon.png'
+import Windy_icon from "./Windy_icon.png"
 export {
   cloudySun,
   darkMode,
@@ -29,5 +33,10 @@ export {
   UVCircle,
   windIcon,
   windStatus,
-  windy
+  windy,
+  banner,
+  humidity_icon,
+  Snowy,
+  sunny_icon,
+  Windy_icon
 };

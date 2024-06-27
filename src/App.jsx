@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import Header from "./components/Header/Header";
 import WeeklyStatus from "./components/WeeklyStatus/WeeklyStatus";
@@ -8,14 +8,25 @@ import MobileView from "./components/MobileView/MobileView.jsx";
 import LoadingScreen from "./components/Loading/Loading.jsx";
 
 function App() {
-const width = window.innerWidth;
-console.log(width,"Width");
+  const [width, setWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div className="app">
       <WeatherContextProvider>
-        <LoadingScreen/>
+        <LoadingScreen />
         <Header />
-        {width<=950&&<MobileView/>}
+        {width <= 950 && <MobileView />}
         <WeeklyStatus />
         <OtherCities />
       </WeatherContextProvider>

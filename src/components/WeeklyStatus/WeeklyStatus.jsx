@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import "./weeklystatus.css";
 import Today from "../Today/Today";
 import CityCards from "../CityCards/CityCards";
@@ -7,6 +7,29 @@ import { WeatherContext } from "../../context/StoreContext";
 
 const WeeklyStatus = () => {
   const { weatherData } = useContext(WeatherContext);
+  const [numDays, setNumDays] = useState(6);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+      if (width <= 1800 && width > 1500) {
+        setNumDays(5);
+      } else if (width <= 1500 && width > 1200) {
+        setNumDays(3);
+      }else if(width>=1700){
+        setNumDays(6);
+      }
+    };
+  
+    handleResize(); 
+    window.addEventListener("resize", handleResize); 
+  
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+  
+  
 
   function generateRandomTemps(numDays, minTemp) {
     const temps = [];
@@ -49,8 +72,8 @@ const WeeklyStatus = () => {
     return daysList;
   }
 
-  const numDays = 6; 
   const daysList = generateDaysList(numDays);
+  console.log(daysList,"list");
 
   return (
     <div className="weeklystatus">

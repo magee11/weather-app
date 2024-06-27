@@ -1,15 +1,14 @@
 import React from "react";
 import "./cards.css";
-import { windStatus } from "../../assets/assets";
 
-const Cards = ({title,img}) => {
+const Cards = ({title,img,des1,des2}) => {
   return (
     <div className="cards">
       <span className="title">{title}</span>
       <img src={img} />
       <div className="cards-detials">
-        <span>7.50 km/h</span>
-        <span>6.20 AM</span>
+        <span>{des1}</span>
+        {des2&&<span>{des2}</span>}
       </div>
     </div>
   );

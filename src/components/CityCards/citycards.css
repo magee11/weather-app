@@ -1,7 +1,7 @@
 .citycards{
     height: calc(250px - 40px);
     background:#1B1B1D;
-    width: 140px;
+    width: 200px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -14,15 +14,17 @@
 }
 .days{
     font-weight: 500;
-    font-size: 20px;
+    font-size: 25px;
     text-align: center;
 }
-.climate{
-    height: 50px;
-    width: 50px;
+.climate img{
+    height: 7rem;
 }
 
-@media only screen and (max-width: 600px) {
+.temp{
+    font-size: 30px;
+}
+@media only screen and (max-width: 950px) {
     .citycards{
         display: none;
     }

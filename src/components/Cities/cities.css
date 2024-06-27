@@ -1,6 +1,6 @@
 .cities {
   width: 90%;
-  height: 80px;
+  height: 8rem;
   background: #1b1b1d;
   display: flex;
   padding: 20px;
@@ -9,6 +9,7 @@
   color: white;
   border-radius: 20px;
   font-size: 14px;
+  transition: 1s;
 }
 
 .places {
@@ -16,17 +17,57 @@
   height: 100%;
   flex-direction: column;
   gap: 10px;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .city {
   font-size: 20px;
   font-weight: 500;
+  margin: 0;
 }
 .country {
+  font-size: 30px;
+  font-weight: 500;
+  margin: 0;
   color: gray;
 }
+.place-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+}
+.place-details p {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 500;
+}
 
-@media only screen and (max-width: 600px) {
+.cities img {
+  height: 5rem;
+  width: 5rem;
+}
+
+
+
+
+@media only screen and (max-width: 1100px) {
+  .cities {
+    width: 100%;
+    height: 7rem;
+  }
+  .city{
+    font-size: 16px;
+  }
+  .country{
+    font-size: 24px;
+  }
+  .cities img {
+    height: 3rem;
+    width: 5rem;
+  }
+}
+
+@media only screen and (max-width: 950px) {
   .cities {
     height: 16rem;
     margin: 0 auto;
