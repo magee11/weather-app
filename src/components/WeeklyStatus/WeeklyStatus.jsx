@@ -49,7 +49,7 @@ const WeeklyStatus = () => {
     return daysList;
   }
 
-  const numDays = 6; // Only generate 6 days
+  const numDays = 6; 
   const daysList = generateDaysList(numDays);
 
   return (

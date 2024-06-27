@@ -38,7 +38,7 @@ const Today = () => {
       : "night";
   };
 
-  const defaultTemp = weatherData ? `${weatherData.main.temp}°C` : "28°C";
+  const defaultTemp = weatherData ? `${weatherData.main.temp}°C` : "0 °C";
   const defaultFeelsLike = weatherData ? weatherData.main.feels_like : "0";
   const defaultWindSpeed = weatherData ? weatherData.wind.speed : "0";
   const defaultPressure = weatherData ? weatherData.main.pressure : "0";

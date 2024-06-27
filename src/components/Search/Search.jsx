@@ -9,11 +9,27 @@ const Search = () => {
     useContext(WeatherContext);
   const [error, setError] = useState(null);
   const [string, setString] = useState("");
+  const [location, setLocation] = useState({ lat: null, lng: null });
+
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
       setSearchString(string);
     }
   };
+
+  useEffect(() => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        setLocation({
+          lat: position.coords.latitude,
+          lng: position.coords.longitude,
+        });
+      });
+    } else {
+      console.error("Geolocation is not supported by this browser.");
+    }
+  }, []);
+
   useEffect(() => {
     const fetchWeather = async () => {
       try {
@@ -30,6 +46,22 @@ const Search = () => {
       fetchWeather();
     }
   }, [searchString, setWeatherData]);
+
+  useEffect(() => {
+    const fetchWeatherByLocation = async (lat, lng) => {
+      try {
+        const response = await fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lng}&localityLanguage=en`);
+        const data = await response.json();
+        setSearchString(data.city || 'Unknown location');
+      } catch (error) {
+        setError(error.message);
+      }
+    };
+
+    if (location.lat && location.lng) {
+      fetchWeatherByLocation(location.lat, location.lng);
+    }
+  }, [location, setSearchString]);
 
   return (
     <div className="search">
