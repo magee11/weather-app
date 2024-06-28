@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "./mobileview.css";
 import {
   cloudySun,
@@ -10,8 +10,10 @@ import {
   compass,
   humidity_icon,
   UVCircle,
+  close1,
 } from "../../assets/assets";
 import { WeatherContext } from "../../context/StoreContext.jsx";
+import { weatherNotifications } from "../../utils/utils.js";
 
 const weeklydetials = [
   { img: thunderCloud, text: "Today ThunderStorm", temp: "28°/21°" },
@@ -29,8 +31,14 @@ const formatTime = (timestamp) => {
   });
 };
 
-const MobileView = () => {
+const MobileView = ({ setNotification, notification }) => {
   const { weatherData } = useContext(WeatherContext);
+  const [notifications_items, setNotificationsItems] =
+    useState(weatherNotifications);
+
+  const removeNotification = (index) => {
+    setNotificationsItems(notifications_items.filter((_, i) => i !== index));
+  };
   const cardItems = [
     {
       title: "UV",
@@ -71,51 +79,53 @@ const MobileView = () => {
     : "00:00";
 
   return (
-    <div className="mobileview">
-      <div className="temp-content">
-        <p className="temperature">
-          {weatherData ? weatherData?.main?.temp : 0}
-          <sup>°c</sup>
-        </p>
-        <span className="climate-details">
-          {weatherData ? weatherData?.weather[0].main : "Cloudy"} 28<sup>°</sup>{" "}
-          / 21
-          <sup>°</sup>
-        </span>
-        <p>{weatherData?.name}</p>
-      </div>
-      <div className="mobile-center-content">
-        <div className="details-header">
-          <p>5-day Forecast</p>
-          <p>More Details</p>
+    <>
+      <div className="mobileview">
+        <div className="temp-content">
+          <p className="temperature">
+            {weatherData ? weatherData?.main?.temp : 0}
+            <sup>°c</sup>
+          </p>
+          <span className="climate-details">
+            {weatherData ? weatherData?.weather[0].main : "Cloudy"} 28
+            <sup>°</sup> / 21
+            <sup>°</sup>
+          </span>
+          <p>{weatherData?.name}</p>
         </div>
-        {weeklydetials.map((item) => (
-          <div className="weeklydetials" key={item.text}>
-            <div className="weeklydetials-left">
-              <img src={item.img} alt="" />
-              <p>{item.text}</p>
-            </div>
-            <div className="weeklydetials-right">
-              <p>{item.temp}</p>
-            </div>
+        <div className="mobile-center-content">
+          <div className="details-header">
+            <p>5-day Forecast</p>
+            <p>More Details</p>
           </div>
-        ))}
-        <button>5-days Forecast</button>
-      </div>
-      <div className="grid-container">
-        {cardItems.map((item, index) => (
-          <div className="grid-item" key={index}>
-            <div>
-              <p>{item.title}</p>
-              <p>{item.value}</p>
+          {weeklydetials.map((item) => (
+            <div className="weeklydetials" key={item.text}>
+              <div className="weeklydetials-left">
+                <img src={item.img} alt="" />
+                <p>{item.text}</p>
+              </div>
+              <div className="weeklydetials-right">
+                <p>{item.temp}</p>
+              </div>
             </div>
-            <div>
-              <img src={item.img} alt="" />
+          ))}
+          <button>5-days Forecast</button>
+        </div>
+        <div className="grid-container">
+          {cardItems.map((item, index) => (
+            <div className="grid-item" key={index}>
+              <div>
+                <p>{item.title}</p>
+                <p>{item.value}</p>
+              </div>
+              <div>
+                <img src={item.img} alt="" />
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

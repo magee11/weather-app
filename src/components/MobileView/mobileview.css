@@ -9,6 +9,7 @@
     color: white;
     gap: 30px;
     flex-direction: column;
+    position: relative;
   }
   .temp-content{
     display: flex;
