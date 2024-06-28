@@ -1,15 +1,16 @@
 .cities {
   width: 90%;
-  height: 8rem;
+  height: 7rem;
   background: #1b1b1d;
   display: flex;
-  padding: 20px;
+  padding: 14px;
   justify-content: space-between;
   align-items: center;
   color: white;
   border-radius: 20px;
   font-size: 14px;
   transition: 1s;
+  margin-bottom: 22px;
 }
 
 .places {

@@ -15,7 +15,7 @@ const WeeklyStatus = () => {
       if (width <= 1800 && width > 1500) {
         setNumDays(5);
       } else if (width <= 1500 && width > 1200) {
-        setNumDays(3);
+        setNumDays(5);
       } else if (width >= 1700) {
         setNumDays(6);
       }

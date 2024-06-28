@@ -22,6 +22,9 @@ import compass from "./compass.png";
 import fast from "./fast.png";
 import loading from "./loading.png";
 import sunset from "./sunset.png"; 
+import close from "./close.png";
+import close1 from "./close1.png"
+
 export {
   cloudySun,
   darkMode,
@@ -46,5 +49,7 @@ export {
   compass,
   fast,
   loading,
-  sunset
+  sunset,
+  close,
+  close1
 };

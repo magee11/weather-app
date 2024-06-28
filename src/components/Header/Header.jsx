@@ -9,13 +9,13 @@ import {
 } from "../../assets/assets.js";
 import Search from "../Search/Search.jsx";
 import { WeatherContext } from "../../context/StoreContext.jsx";
-const Header = () => {
+const notification_icon = notification;
+const Header = ({ setNotification, notification }) => {
   const { weatherData } = useContext(WeatherContext);
+
   return (
     <div className="header">
       <div className="header-left">
-        <img src={dashboard} className="dashboard" />
-        <img src={notification} className="notification" />
         <img src={geoPin} className="geopin" alt="" />
         {weatherData && <span className="location">{weatherData?.name}</span>}
       </div>
@@ -24,7 +24,12 @@ const Header = () => {
       </div>
       <div className="header-right">
         <img src={dashboard} alt="" className="theme" />
-        <img src={notification} alt="" className="profile" />
+        <img
+          src={notification_icon}
+          onClick={() => setNotification(!notification)}
+          alt=""
+          className="profile"
+        />
       </div>
     </div>
   );

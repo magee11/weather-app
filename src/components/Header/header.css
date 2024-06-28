@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 60px 30px 30px;
   color: white;
   margin: 0 auto;
   transition: 0.4s;
@@ -12,9 +12,12 @@
 }
 .header-left {
   display: flex;
-  gap: 15px;
   justify-content: space-between;
   align-items: center;
+}
+.location{
+  font-size: 20px;
+  font-weight: 500;
 }
 .header-right {
   display: flex;

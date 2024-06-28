@@ -85,3 +85,27 @@ export const otherCities = [
   { country: "Norway", city: "Oslo", climate: snowy, temperature: 4 },
   { country: "Finland", city: "Helsinki", climate: snowy, temperature: 5 },
 ];
+
+
+export const weatherNotifications = [
+  {
+    message: "☀️ It's a bright and sunny day! Enjoy the sunshine!",
+    img: "https://example.com/sunny.jpg",
+  },
+  {
+    message: "🌧️ It's raining outside. Don't forget your umbrella!",
+    img: "https://example.com/rainy.jpg",
+  },
+  {
+    message: "☁️ It's a bit cloudy today. A perfect day for a walk!",
+    img: "https://example.com/cloudy.jpg",
+  },
+  {
+    message: "❄️ Snow is falling! Time to build a snowman!",
+    img: "https://example.com/snowy.jpg",
+  },
+  {
+    message: "⛈️ A storm is coming. Stay indoors and stay safe!",
+    img: "https://example.com/stormy.jpg",
+  },
+];

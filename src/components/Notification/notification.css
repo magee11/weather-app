@@ -1,0 +1,61 @@
+.notification {
+    height: 100vh;
+    width: 25%;
+    background-color: #1B1B1D;
+    position: absolute;
+    right: 0;
+    transition: 0.4s;
+    animation: slideFromRight .5s;
+    z-index: 0;
+    box-shadow: 0 10px 20px rgba(8, 0, 0, 1);
+}
+
+.notification_head{
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    padding: 20px 30px;
+    align-items: center;
+
+}
+.notification_head img{
+    height: 1.5rem;
+    width: 1.5rem;
+    padding: 20px 0;
+}
+.notification_head p{
+    font-size: 24px;
+    font-weight: 500;
+}
+.close{
+    cursor: pointer;
+    height: 1.5rem;
+}
+
+.notification_content{
+    padding: 20px;
+    width: 75%;
+    margin:0 auto ;
+    display: flex;
+    border-radius:20px ;
+    justify-content: space-around;
+    gap: 20px;
+    background-color: rgb(179, 156, 255);
+    align-items: center;
+    margin-bottom: 30px;
+    position: relative;
+    font-size: 18px;
+    font-weight: 500;
+    box-shadow: 0 5px 10px rgba(8, 0, 0, .5);
+    transition: 0.4s;
+    animation: slideFromRight 1s;
+}
+
+.notification-close{
+    position: absolute;
+    height: 1.5rem;
+    top: -10px;
+    right: -5px;
+    cursor: pointer;
+}

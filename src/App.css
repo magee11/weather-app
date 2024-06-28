@@ -4,4 +4,5 @@
   transition: 0.4s;
   background-color: black;
   animation: fadeIn 1s;
+  position: relative;
 }
