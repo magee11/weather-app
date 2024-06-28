@@ -16,8 +16,12 @@ import windy from './windy.svg';
 import banner from './banner.svg'
 import humidity_icon from './humidity_icon.svg';
 import Snowy from "./Snowy.png";
-import sunny_icon from './sunny_icon.png'
-import Windy_icon from "./Windy_icon.png"
+import sunny_icon from './sunny_icon.png';
+import Windy_icon from "./Windy_icon.png";
+import compass from "./compass.png";
+import fast from "./fast.png";
+import loading from "./loading.png";
+import sunset from "./sunset.png"; 
 export {
   cloudySun,
   darkMode,
@@ -38,5 +42,9 @@ export {
   humidity_icon,
   Snowy,
   sunny_icon,
-  Windy_icon
+  Windy_icon,
+  compass,
+  fast,
+  loading,
+  sunset
 };

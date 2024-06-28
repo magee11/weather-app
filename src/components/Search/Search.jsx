@@ -11,10 +11,9 @@ const Search = () => {
   const [string, setString] = useState("");
   const [location, setLocation] = useState({ lat: null, lng: null });
 
-  const handleKeyDown = (e) => {
-    if (e.key === "Enter") {
-      setSearchString(string);
-    }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setSearchString(string);
   };
 
   useEffect(() => {
@@ -50,9 +49,11 @@ const Search = () => {
   useEffect(() => {
     const fetchWeatherByLocation = async (lat, lng) => {
       try {
-        const response = await fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lng}&localityLanguage=en`);
+        const response = await fetch(
+          `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lng}&localityLanguage=en`
+        );
         const data = await response.json();
-        setSearchString(data.city || 'Unknown location');
+        setSearchString(data.city || "Unknown location");
       } catch (error) {
         setError(error.message);
       }
@@ -66,13 +67,14 @@ const Search = () => {
   return (
     <div className="search">
       <img src={search} alt="search icon" />
-      <input
-        type="text"
-        placeholder="Search"
-        value={string}
-        onChange={(e) => setString(e.target.value)}
-        onKeyDown={handleKeyDown}
-      />
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          placeholder="Search"
+          value={string}
+          onChange={(e) => setString(e.target.value)}
+        />
+      </form>
     </div>
   );
 };

@@ -16,20 +16,18 @@ const WeeklyStatus = () => {
         setNumDays(5);
       } else if (width <= 1500 && width > 1200) {
         setNumDays(3);
-      }else if(width>=1700){
+      } else if (width >= 1700) {
         setNumDays(6);
       }
     };
-  
-    handleResize(); 
-    window.addEventListener("resize", handleResize); 
-  
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-  
-  
 
   function generateRandomTemps(numDays, minTemp) {
     const temps = [];
@@ -73,7 +71,6 @@ const WeeklyStatus = () => {
   }
 
   const daysList = generateDaysList(numDays);
-  console.log(daysList,"list");
 
   return (
     <div className="weeklystatus">

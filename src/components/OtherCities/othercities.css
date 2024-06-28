@@ -36,8 +36,8 @@
     animation: contentAppear 1s;
 }
 
-@media only screen and (max-width: 950px) {
-    .other-cities{
+@media only screen and (max-width: 600px) {
+    .othercities{
         display: none;
     }
 }

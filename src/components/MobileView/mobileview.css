@@ -1,160 +1,145 @@
 /* Default styles for screens up to 650px */
 @media only screen and (max-width: 650px) {
-    .mobileview {
-        height: 100%;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        flex-direction: column;
-    }
+  .mobileview {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    gap: 30px;
+    flex-direction: column;
+  }
+  .temp-content{
+    display: flex;
+    margin: 2rem 0 2rem;
+    flex-direction: column;
+    align-items: center;
+  }
+  .temperature {
+    font-size: 55px;
+    font-weight: 500;
+    margin: 10px;
+  }
 
-    .temperature {
-        font-size: 55px;
-        font-weight: 500;
-        margin: 10px;
-    }
+  .climate-details {
+    font-size: 20px;
+  }
 
-    .climate-details {
-        font-size: 20px;
-    }
+  sup {
+    vertical-align: super;
+    font-size: smaller;
+  }
 
-    sup {
-        vertical-align: super;
-        font-size: smaller;
-    }
+  .mobile-center-content {
+    background-color: #1b1b1d;
+    border-radius: 20px;
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0rem 2rem 0rem;
+  }
 
-    .mobile-center-content {
-        margin: 5rem 0 2rem;
-        background-color: #1B1B1D;
-        border-radius: 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 1rem 1rem 2rem 1rem;
-    }
+  .mobile-center-content button {
+    padding: 7px 50px;
+    border-radius: 50px;
+  }
 
-    .mobile-center-content button {
-        padding: 7px 50px;
-        border-radius: 50px;
-    }
+  .weeklydetials {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
 
-    .weeklydetials {
-        display: flex;
-        justify-content: space-between;
-        width: 80%;
-        margin: 0 auto;
-        padding: 10px 20px;
-        font-size: 16px;
-    }
+  .weeklydetials-left {
+    display: flex;
+    align-items: center;
+  }
 
-    .weeklydetials-left {
-        display: flex;
-        align-items: center;
-    }
+  .weeklydetials-left img {
+    width: 30px;
+    margin-right: 10px;
+  }
 
-    .weeklydetials-left img {
-        width: 30px;
-        margin-right: 10px;
-    }
+  .weeklydetials-left p {
+    margin: 0;
+    font-size: 16px;
+  }
 
-    .weeklydetials-left p {
-        margin: 0;
-        font-size: 16px;
-    }
+  .weeklydetials-right {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+  }
 
-    .weeklydetials-right {
-        display: flex;
-        align-items: center;
-        font-size: 16px;
-    }
+  .details-header {
+    display: flex;
+    justify-content: space-around;
+    font-size: 12px;
+    color: gray;
+    width: 100%;
+  }
 
-    .details-header {
-        display: flex;
-        justify-content: space-around;
-        font-size: 12px;
-        color: gray;
-        width: 100%;
-    }
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    padding-bottom:30px;
+    width: 90%;
+  }
 
-    .grid-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        gap: 10px;
-        margin: 20px 0;
-        width: 100%;
-    }
-
-    .grid-item {
-        height: 5rem;
-        width: 5rem;
-    }
-
-    .bg-color-1 { background-color: #FF5733; }
-    .bg-color-2 { background-color: #33FF57; }
-    .bg-color-3 { background-color: #3357FF; }
-    .bg-color-4 { background-color: #FF33A1; }
-    .bg-color-5 { background-color: #A1FF33; }
-    .bg-color-6 { background-color: #33A1FF; }
-
-    .details-row {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        margin-top: 20px;
-    }
-
-    .details-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #1B1B1D;
-        border-radius: 20px;
-        padding: 1rem;
-        width: 80%;
-    }
-
-    .details-text {
-        display: flex;
-        flex-direction: column;
-        color: white;
-        font-size: 1rem;
-    }
-
-    .details-img {
-        width: 5rem;
-        height: 5rem;
-    }
+  .grid-item {
+    border-radius: 10px;
+    display: flex;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #1b1b1d;
+    color: white;
+    font-size: 20px;
+    height: 150px;
+  }
+  .grid-item p{
+    font-size: 16px;
+  }
+  .grid-item img{
+    float: right;
+    height: 4rem;
+    width: 4rem; 
+  }
 }
 
 /* Media Query for screens between 650px and 950px */
 @media only screen and (min-width: 651px) and (max-width: 950px) {
-    .mobile-center-content {
-        width: 80%;
-        height: 70vh;
-        justify-content: space-between;
-    }
+  .mobile-center-content {
+    width: 80%;
+    height: 70vh;
+    justify-content: space-between;
+  }
 
-    .mobile-center-content button {
-        padding: 11px 6rem;
-    }
+  .mobile-center-content button {
+    padding: 11px 6rem;
+  }
 
-    .weeklydetials-left p {
-        font-size: 20px;
-    }
+  .weeklydetials-left p {
+    font-size: 20px;
+  }
 
-    .weeklydetials-right {
-        font-size: 24px;
-    }
+  .weeklydetials-right {
+    font-size: 24px;
+  }
 
-    .weeklydetials-left img {
-        width: 4rem;
-    }
+  .weeklydetials-left img {
+    width: 4rem;
+  }
 
-    .details-header {
-        font-size: 14px;
-    }
+  .details-header {
+    font-size: 14px;
+  }
 }
