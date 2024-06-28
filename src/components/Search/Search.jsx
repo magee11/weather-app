@@ -3,8 +3,6 @@ import { search } from "../../assets/assets.js";
 import "./search.css";
 import { WeatherContext } from "../../context/StoreContext.jsx";
 import { getWeather } from "../../api/Weather.jsx";
-import { toast, ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
 const Search = () => {
   const { searchString, setWeatherData, setSearchString } = useContext(WeatherContext);
@@ -38,12 +36,10 @@ const Search = () => {
           });
         },
         (error) => {
-          toast.error("Failed to fetch location data.");
           console.error("Error fetching location:", error);
         }
       );
     } else {
-      toast.error("Geolocation is not supported by this browser.");
       console.error("Geolocation is not supported by this browser.");
     }
   }, []);
@@ -54,11 +50,9 @@ const Search = () => {
         const data = await getWeather(searchString);
         setWeatherData(data);
         setError(null);
-        toast.success("Location fetched successfully.");
       } catch (error) {
         setError(error.message);
         setWeatherData(null);
-        toast.error("Please Enter Valid Location");
       }
     };
 
@@ -77,7 +71,6 @@ const Search = () => {
         setSearchString(data.city || "Unknown location");
       } catch (error) {
         setError(error.message);
-        toast.error("Failed to fetch location data.");
       }
     };
 
@@ -88,7 +81,6 @@ const Search = () => {
 
   return (
     <div className="search">
-      <ToastContainer />
       <img src={search} alt="search icon" />
       <form onSubmit={handleSubmit}>
         <input
